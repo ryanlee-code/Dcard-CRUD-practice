@@ -18,5 +18,7 @@ Rails.application.routes.draw do
   # post '/login', to: 'sessions#create', as: 'login'
   # delete '/users/sign_out', to: 'sessions#destroy', as: 'logout'
 
-  resources :boards
+  resources :boards do
+    resources :posts, shallow: true
+  end
 end
