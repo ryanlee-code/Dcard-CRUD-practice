@@ -1,0 +1,15 @@
+<h1>編輯文章</h1>
+<%= form_for(@post) do |form| %>
+  
+  <div class="field">
+    <%= form.label :title ,'文章標題'%>
+    <%= form.text_field :title %>
+  </div>
+  <div class="field">
+    <%= form.label :content%>
+    <%= form.text_area :content%>
+  </div>
+
+  <%= form.submit '更新文章' %>
+
+<% end %>
